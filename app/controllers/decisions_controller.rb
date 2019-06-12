@@ -1,5 +1,5 @@
 class DecisionsController < ApplicationController
-  before_action :set_decision, only: [:show, :edit, :update, :destroy]
+  before_action :set_decision, only: [:show, :edit, :update, :destroy, :addOptions]
 
   # GET /decisions
   # GET /decisions.json
@@ -58,6 +58,12 @@ class DecisionsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to decisions_url, notice: 'Decision was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def addOptions
+    respond_to do |format|
+      format.js
     end
   end
 

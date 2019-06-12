@@ -1,0 +1,11 @@
+<%= render 'form_add', collection: collection, title: title.downcase() %>
+<table>
+  <tbody class="scroll">  
+    <% collection.each_with_index do |option, index| %>
+      <tr>
+        <td>#<%= index + 1 %></td>
+        <td><%= option.description %></td>
+      <tr> 
+    <% end %>
+  </tbody>
+</table>

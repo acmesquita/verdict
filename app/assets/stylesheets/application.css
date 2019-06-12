@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+/* width */
+body{
+    background-color: #fafafa
+}
+.scroll{
+	float: left;
+	height: 300px;
+    overflow-y: scroll;
+    width: 100%;
+}

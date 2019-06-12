@@ -1,4 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_decision_path(@decision) %> |
-<%= link_to 'Back', decisions_path %>
+<%= link_to 'Back', decisions_path, class:"waves-effect waves-light btn" %>
+
+<h4 class="center-align"><%= @decision.title %></h4>
+
+<div class="row">
+    <div class="col s4 " id="advantages">
+        <h5 class="center-align">Advantages</h5>
+        <%= render 'form_options', collection: @decision.advantages, decision: @decision, title: 'Advantages' %>
+    </div>
+    <div class="col s4 " id="disadvantages">
+        <h5 class="center-align">Disadvantages</h5>
+
+        <%= render 'form_options', collection: @decision.disadvantages, decision: @decision, title: 'Disadvantages' %>
+    </div>
+    <div class="col s4 " id="notes">
+        <h5 class="center-align">Notes</h5>
+        <%= render 'form_options', collection: @decision.notes, decision: @decision, title: 'Notes' %>
+    </div>
+</div>
+

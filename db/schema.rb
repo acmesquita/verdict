@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_12_143621) do
+ActiveRecord::Schema.define(version: 2019_06_12_214159) do
 
   create_table "advantages", force: :cascade do |t|
     t.string "description"
@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(version: 2019_06_12_143621) do
     t.datetime "updated_at", null: false
     t.integer "decision_id"
     t.index ["decision_id"], name: "index_disadvantages_on_decision_id"
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.string "description"
+    t.integer "decision_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decision_id"], name: "index_notes_on_decision_id"
   end
 
 end

@@ -1,0 +1,8 @@
+<div class="row display-flex">
+    <div class="col s9">
+        <input id="description-<%= title %>" placeholder="Type here..." autocomplete="off">
+    </div>
+    <div class="col s3 valign-wrapper">
+       <a class="btn-floating red" onclick="add('description-<%=title %>', <%= @decision.id %>, '<%=title %>')"><i class="material-icons">add</i></a>
+    </div>
+</div>
