@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_12_142053) do
+ActiveRecord::Schema.define(version: 2019_06_12_143621) do
 
   create_table "advantages", force: :cascade do |t|
     t.string "description"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_06_12_142053) do
   create_table "decisions", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
   end
 
   create_table "disadvantages", force: :cascade do |t|

@@ -69,6 +69,6 @@ class DecisionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def decision_params
-      params.fetch(:decision, {})
+      params.require(:decision).permit(:title)
     end
 end
