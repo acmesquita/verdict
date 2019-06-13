@@ -1,7 +1,7 @@
 module DecisionsHelper
 
     def addNewOption(decision, nameMethod, value)
-        nameModel = nameMethod.humanize[0..-2]
+        nameModel = nameMethod.humanize.singularize
         decision.send(nameMethod).push(nameModel.constantize.new({description: value}))
         decision.save()
 
