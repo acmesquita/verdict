@@ -20,7 +20,7 @@
 
 function add(idElement, idDecision, nameMethod) {
 
-  var descriptionEl = document.querySelector(`#${idElement}`)
+  var descriptionEl = document.querySelector("#"+idElement)
   var value = descriptionEl.value
   if (value){
     $.ajax({
