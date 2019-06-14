@@ -7,3 +7,21 @@
 .display-flex{
     display: flex;
 }
+
+.alerts{
+    clear: right;
+    padding: 0 20px;
+    font-size: 18px;
+    .notice{
+        color: green;
+        background-color: #90ee90a3;
+        padding: 14px;
+        border-radius: 5px;
+    }
+    .alert{
+        color: red;
+        background-color: #f080808c ;
+        padding: 14px;
+        border-radius: 5px;
+    }
+}

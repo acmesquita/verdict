@@ -18,7 +18,7 @@
 
   <div class="actions">
     <%= form.submit 'Save', class:"waves-effect waves-light btn blue" %>
-    <%= link_to 'Show', @decision,  class:"waves-effect waves-light btn green" if @decision%>
+    <%= link_to 'Show', @decision,  class:"waves-effect waves-light btn green" if @decision.id %>
     <%= link_to 'Back', decisions_path,  class:"waves-effect waves-light btn" %>
   </div>
 <% end %>

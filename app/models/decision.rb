@@ -1,6 +1,6 @@
 class Decision < ApplicationRecord
 
-    has_many :advantages
-    has_many :disadvantages
-    has_many :notes
+    has_many :advantages, :dependent => :destroy
+    has_many :disadvantages,  :dependent => :destroy
+    has_many :notes,  :dependent => :destroy
 end

@@ -1,0 +1,6 @@
+<ul id="" class="">
+  <li><h5>Decisions</h5></li>
+  <% current_user.decisions.each do |decision|%>
+    <li><h6><%= link_to decision.title, decision %></h6></li>
+  <%end%>
+</ul>

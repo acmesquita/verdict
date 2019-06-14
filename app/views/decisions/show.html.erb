@@ -1,6 +1,8 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Back', decisions_path, class:"waves-effect waves-light btn" %>
+<%#= link_to 'Back', decisions_path, class:"waves-effect waves-light btn" %>
+<div class="col s2">
+    <%= render 'sidenav' %>
+</div>
+<div class="col s10">
 
 <h4 class="center-align"><%= @decision.title %></h4>
 
@@ -20,3 +22,4 @@
     </div>
 </div>
 
+</div>

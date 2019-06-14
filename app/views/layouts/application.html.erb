@@ -11,7 +11,30 @@
   </head>
 
   <body>
-    <div class="container">
+      <nav>
+        <div class="nav-wrapper blue-grey darken-2">
+          <a href="/" class="brand-logo">Verdict</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if current_user %>
+            <li><a href="#"><%= current_user.email%></a></li>
+            <li> 
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                  <i class="material-icons">exit_to_app</i>        
+                <% end %>
+            </li>
+          <%end%>
+          </ul>
+        </div>
+      </nav>
+    <div class="row">
+    <div class="alerts">
+      <% if notice %>
+        <p class="notice"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert"><%= alert %></p>
+      <%end%>
+    </div>
       <%= yield %>
     </div>
   </body>

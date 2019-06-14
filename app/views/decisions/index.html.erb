@@ -1,32 +1,22 @@
-<p id="notice"><%= notice %></p>
-
-<h3 class="">Decisions
-  <%= link_to 'New Decision', new_decision_path, class:"waves-effect waves-light btn primary valign-wrapper center-align right" %>
-</h3>
-<table class="highlight">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Options</th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="col s2"></div>
+<div class="col s8">
+  <h3 class="">Decisions
+    <%= link_to 'New Decision', new_decision_path, class:"waves-effect waves-light btn primary valign-wrapper center-align right" %>
+  </h3>
+  <div class="row">
     <% @decisions.each do |decision| %>
-      <tr>
-        <td><%= link_to decision.title, decision %></td>
-        <td>
-          <%= link_to edit_decision_path(decision) do %>
-            <i class="material-icons">edit</i>
-          <%end%>
-          <%= link_to decision, method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <i class="material-icons">delete</i>        
-        <% end %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+      <div class="col s4 m6">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title"><%= link_to decision.title, decision %></span>
+          </div>
+          <div class="card-action">
+            <%= link_to 'Edit', edit_decision_path(decision) %>
+            <%= link_to 'Delete', decision, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
+<div class="col s2"></div>

@@ -4,7 +4,7 @@ class DecisionsController < ApplicationController
   # GET /decisions
   # GET /decisions.json
   def index
-    @decisions = Decision.all
+    @decisions = current_user.decisions
   end
 
   # GET /decisions/1
@@ -25,6 +25,7 @@ class DecisionsController < ApplicationController
   # POST /decisions.json
   def create
     @decision = Decision.new(decision_params)
+    current_user.decisions.push(@decision)
 
     respond_to do |format|
       if @decision.save

@@ -17,11 +17,19 @@
 body{
     background-color: #fafafa
 }
+nav .nav-wrapper {
+    padding-left: 10px;
+}
 .scroll{
 	float: left;
 	height: 300px;
     overflow-y: scroll;
     width: 100%;
+}
+
+.login{
+    margin: 100px;
+    padding: 35px;
 }
 
 ::-webkit-scrollbar-track {
@@ -34,3 +42,4 @@ body{
 ::-webkit-scrollbar-thumb {
     background: #dad7d7;
 }
+
