@@ -20,8 +20,8 @@
 
 function add(idElement, idDecision, nameMethod) {
 
-  let descriptionEl = document.querySelector(`#${idElement}`)
-  let value = descriptionEl.value
+  var descriptionEl = document.querySelector(`#${idElement}`)
+  var value = descriptionEl.value
   if (value){
     $.ajax({
       url: '/decisions/'+idDecision+'/addOptions.js',
