@@ -1,6 +1,7 @@
-class Decision < ApplicationRecord
+# frozen_string_literal: true
 
-    has_many :advantages, :dependent => :destroy
-    has_many :disadvantages,  :dependent => :destroy
-    has_many :notes,  :dependent => :destroy
+class Decision < ApplicationRecord
+  has_many :advantages, dependent: :destroy
+  has_many :disadvantages, dependent: :destroy
+  has_many :notes, dependent: :destroy
 end

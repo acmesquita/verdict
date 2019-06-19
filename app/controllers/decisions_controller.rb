@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class DecisionsController < ApplicationController
-  before_action :set_decision, only: [:show, :edit, :update, :destroy, :addOptions]
+  before_action :set_decision, only: %i[show edit update destroy addOptions]
 
   # GET /decisions
   # GET /decisions.json
@@ -9,8 +11,7 @@ class DecisionsController < ApplicationController
 
   # GET /decisions/1
   # GET /decisions/1.json
-  def show
-  end
+  def show; end
 
   # GET /decisions/new
   def new
@@ -18,8 +19,7 @@ class DecisionsController < ApplicationController
   end
 
   # GET /decisions/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /decisions
   # POST /decisions.json
@@ -62,20 +62,21 @@ class DecisionsController < ApplicationController
     end
   end
 
-  def addOptions
+  def add_options
     respond_to do |format|
       format.js
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_decision
-      @decision = Decision.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def decision_params
-      params.require(:decision).permit(:title)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_decision
+    @decision = Decision.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def decision_params
+    params.require(:decision).permit(:title)
+  end
 end
